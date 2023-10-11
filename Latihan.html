@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Penjumlahan Bilangan</title>
+  </head>
+  <body>
+    <h1>Penjumlahan Bilangan</h1>
+    <form>
+      <label for="bilanganPertama">Bilangan Pertama</label>
+      <input type="number" id="bilanganPertama" name="bilanganPertama" />
+      <label for="bilanganKedua">Bilangan Kedua</label>
+      <input type="number" id="bilanganKedua" name="bilanganKedua" />
+      <input type="submit" value="Jumlahkan" />
+    </form>
+    <div id="hasilPenjumlahan"></div>
+    <script src="script.js"></script>
+  </body>
+
+  <script>
+    const form = document.querySelector("form");
+    const bilanganPertama = document.querySelector("#bilanganPertama");
+    const bilanganKedua = document.querySelector("#bilanganKedua");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const bilangan1 = parseInt(bilanganPertama.value);
+      const bilangan2 = parseInt(bilanganKedua.value);
+      const jumlah = bilangan1 + bilangan2;
+      alert(`Hasil Penjumlahan = ${jumlah}`);
+    });
+  </script>
+</html>

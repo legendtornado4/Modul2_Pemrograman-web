@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Formulir Pendaftaran</title>
+    <link rel="stylesheet" type="text/css" href="Latihan.css" />
+  </head>
+  <body>
+    <form onsubmit="return validateForm()">
+      <label for="nama_lengkap">Nama Lengkap:</label><br />
+      <input type="text" id="nama_lengkap" name="nama_lengkap" /><br />
+
+      <label for="email">Email:</label><br />
+      <input type="email" id="email" name="email" /><br />
+
+      <label for="alamat">Alamat:</label><br />
+      <textarea id="alamat" name="alamat" rows="4" cols="50"></textarea><br />
+
+      <input type="submit" value="Daftar" />
+    </form>
+
+    <script>
+      function validateForm() {
+        var nama_lengkap = document.getElementById("nama_lengkap").value.trim();
+        var email = document.getElementById("email").value.trim();
+        var alamat = document.getElementById("alamat").value.trim();
+
+        if (nama_lengkap == "" || email == "" || alamat == "") {
+          alert("Anda harus mengisi data dengan lengkap");
+          return false;
+        } else {
+          alert("Email telah didaftarkan");
+        }
+        return false;
+
+        return true;
+      }
+    </script>
+  </body>
+</html>
